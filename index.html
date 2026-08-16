@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="assets/avatar.jpg" type="image/x-icon">
 </head>
 
 <body class="grid-bg anonymous-pro-regular" style="display: block; color: wheat;">
@@ -15,8 +16,7 @@
         <div class="flex flex-row" style="gap: 20px;">
             <a href="#home">home</a>
             <a href="#projects">projects</a>
-            <a href="#links">links</a>
-            <a href="#contact">contact</a>
+            <a href="#links">links & contact</a>
         </div>
         <div class="flex flex-row" style="margin-left: auto;">
             <p>made by Vaito &gt;:D</p>
@@ -43,11 +43,12 @@
             </div>
         </div>
     </section>
+
     <!-- Projects -->
     <section id="projects" class="box flex flex-col"
         style="height: 85vh; width: 90vw; padding: 5vh; margin-bottom: 30px; gap: 50px">
         <div class="flex flex-row" style="align-items: baseline; gap: 20px;">
-            <a style="font-weight: bold; font-size: xx-large;" href="#project">My cool projects :D</a>
+            <a style="font-weight: bold; font-size: xx-large;" href="#projects">My cool projects :D</a>
             <a style="font-size: large; cursor: pointer;" onclick="selectProject('null')">reset</a>
         </div>
 
@@ -80,6 +81,27 @@
 
             <section class="flex flex-col" style="width: 75%; height: inherit; gap: 20px" id="project-detail">
             </section>
+        </div>
+    </section>
+
+    <!-- Links -->
+    <section class="flex flex-row box" id="links" style="gap: 60px">
+        <div class="flex flex-col" style="flex: 1; border-width: 5px; border-style: solid; padding-top: 50px; padding-bottom: 50px;">
+            <div class="flex flex-col" style="margin: auto; align-items: center;">
+                <h1>Vaito</h1>
+                <p style="font-size: large;">Now learning @ <a href="https://hcmus.edu.vn/">HCMUS</a></p>
+            </div>
+        </div>
+        <div class="flex flex-col" style="flex: 1; gap: 10px">
+            <p style="font-weight: bold; font-size: xx-large;">Links</p>
+            <a style="font-size: larger;" href="https://git.vaito.dev/vaito">Forgejo</a>
+            <a style="font-size: larger;" href="https://github.com/VaitoSoi/">GitHub</a>
+        </div>
+        <div class="flex flex-col" style="flex: 1; gap: 10px">
+            <p style="font-weight: bold; font-size: xx-large;">Contacts</p>
+            <a style="font-size: larger;" href="mailto:me@vaito.dev">me@vaito.dev</a>
+            <a style="font-size: larger;" href="mailto:duyduy15456@gmail.com">duyduy15456@gmail.com</a>
+            <a style="font-size: larger;" href="https://discord.com/users/692271452053045279">Discord</a>
         </div>
     </section>
 
