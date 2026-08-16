@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaito @ HCMUS</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="grid-bg anonymous-pro-regular" style="display: grid; color: wheat;">
+    <nav style="height: 2vh;">
+        <div class="flex flex-row" style="gap: 20px;">
+            <a href="#home">home</a>
+            <a href="#projects">projects</a>
+            <a href="#links">links</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="flex flex-row" style="margin-left: auto;">
+            <p>made by Vaito &gt;:D</p>
+        </div>
+    </nav>
+    <!-- Body -->
+    <!-- Hero section -->
+    <section id="home" class="box" style="height: 70vh;">
+        <div class="flex" style="flex: 1;">
+            <div class="flex flex-col" style="margin: auto 0 auto 0; gap: 20px">
+                <p style="font-size: 3rem;">
+                    Hi, I'm Vaito, <br>a
+                    <span id="role">developer</span>.
+                </p>
+                <p style="font-size: larger;">Welcome to my personal site :D</p>
+            </div>
+        </div>
+        <div class="flex" style="flex: 1;">
+            <div class="flex flex-col" style="margin: auto; gap: 10px">
+                <img alt="The cute artwork from @dric on threads"
+                    style="height: 30rem; width: 30rem; flex: 1; border-radius: 10px;" src="./assets/avatar.jpg">
+                <p style="flex: 1; margin-left: auto;">from <a class="animated-underline"
+                        href="https://www.threads.com/share/BAea_LxsV4">@dric on threads</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="box flex flex-col" style="height: 80vh; padding: 5rem; margin-bottom: 30px; gap: 50px">
+        <p style="font-weight: bold; font-size: xx-large;">My cool projects :D</p>
+        <div class="flex flex-row" style="height: 100%;">
+            <aside class="flex flex-col" style="flex: 1.2; margin: 20px 0;">
+                <div class="project-item" onclick="">
+                    <p class="pi-title">TOEIC Writing Platform</p>
+                    <p class="pi-desc">A simple app to generate topics, submit and evaluate TOEIC Writing essays</p>
+                </div>
+                <div class="project-item">
+                    <p class="pi-title">MineJS</p>
+                    <p class="pi-desc">A Minecraft client package</p>
+                </div>
+                <div class="project-item">
+                    <p class="pi-title">Dur Converter</p>
+                    <p class="pi-desc">A simple converter CLI that convert your video into .dur file</p>
+                </div>
+                <div class="project-item">
+                    <p class="pi-title">Dump SQLModel</p>
+                    <p class="pi-desc">A simple library that helps you dump and load your SQLModel objects</p>
+                </div>
+                <div class="project-item">
+                    <p class="pi-title">Captcha</p>
+                    <p class="pi-desc">A simple captcha generator</p>
+                </div>
+            </aside>
+            <div class="flex" style="flex: 4;" id="project-detail">
+                <div class="flex flex-col" style="margin: auto; align-items: center;">
+                    <h1 style="font-size: 3rem;">Nothing here</h1>
+                    <p style="font-size: x-large; text-align: center;">Click the project beside<br>for detail!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
