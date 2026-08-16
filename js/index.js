@@ -81,6 +81,9 @@ async function selectProject(ind) {
         container.addEventListener("animationend", () => {
             container.classList.remove("enter-from-top");
         }, { once: true })
+        const selected = document.getElementsByClassName("selected");
+        if (selected.length)
+            selected[0].classList.remove("selected")
         return;
     }
     const goingDown = ind > currentInd;
