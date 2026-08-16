@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
 a {
@@ -71,25 +71,25 @@ a:focus {
 nav {
     display: flex;
     flex-direction: row;
-    
+
     border-style: solid;
     border-width: 3px;
 
-    padding: 20px; 
-    margin: 30px 30px 0px 30px; 
-     
+    padding: 1.5rem;
+    margin: 2vh 3vh 0 3vh;
+
     color: wheat;
 
     /* font */
     font-family: "Anonymous Pro", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .animated-underline,
-nav a,
-.project-item .pi-title {
+a,
+.project-sidebar .pi-title {
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -97,8 +97,8 @@ nav a,
 }
 
 .animated-underline::after,
-nav a::after,
-.project-item .pi-title::after {
+a::after,
+.project-sidebar .pi-title::after {
     content: "";
     position: absolute;
     left: 0;
@@ -115,16 +115,16 @@ nav a::after,
 
 .animated-underline:hover::after,
 .animated-underline:focus-visible::after,
-nav a:hover::after,
-nav a:focus-visible::after,
-.project-item:hover .pi-title::after,
-.project-item:focus-within .pi-title::after {
+a:hover::after,
+a:focus-visible::after,
+.project-sidebar:hover .pi-title::after,
+.project-sidebar:focus-within .pi-title::after {
     transform: scaleX(1);
 }
 
 .animated-underline:not(:hover)::after,
-nav a:not(:hover)::after,
-.project-item:not(:hover) .pi-title::after {
+a:not(:hover)::after,
+.project-sidebar:not(:hover) .pi-title::after {
     transform-origin: right;
 }
 
@@ -135,20 +135,49 @@ nav a:not(:hover)::after,
     flex-direction: row;
     border-style: solid;
     border-width: 5px;
-    margin: 30px 30px 0px 30px; 
+    margin: 3vh 3vh 0px 3vh;
     padding: 5rem;
 }
 
-.project-item {
+#project-detail {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-sidebar {
     margin: 10px 10px;
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 15px;
     cursor: pointer;
+    transition:
+        transform 400ms ease,
+        opacity 500ms ease,
+        border-style 500ms ease,
+        border-color 500ms ease,
+        background-color 500ms ease;
+    transform: translateX(0px);
+    opacity: 0.7;
 }
 
-/* pi = project-item */
+.project-sidebar:hover {
+    opacity: 1;
+}
+
+.project-sidebar.selected {
+    transform: translateX(10px);
+    opacity: 1;
+    padding: 10px;
+    background-color: rgb(34, 31, 26);
+    border-style: solid;
+    border-width: 3px;
+    border-color: wheat;
+    transition:
+        transform 600ms ease
+}
+
+/* pi = project-sidebar on the side bar */
 .pi-title {
     font-size: x-large;
     font-weight: bold;
@@ -158,6 +187,130 @@ nav a:not(:hover)::after,
 .pi-desc {
     font-size: large;
     font-weight: normal;
+}
+
+#project-detail,
+.readme,
+.flex.flex-row>* {
+    min-height: 0;
+    min-width: 0;
+}
+
+.readme table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.readme img {
+    max-width: 100%;
+}
+
+.readme h1 {
+    font-size: xx-large;
+}
+
+.readme h2 {
+    font-size: xx-large;
+}
+
+.readme p,
+li,
+th,
+td,
+code {
+    font-size: larger;
+    margin: 2px;
+    overflow-wrap: break-word;
+}
+
+.readme li {
+    margin-left: 35px;
+}
+
+.readme pre {
+    margin: 2px;
+    overflow-x: auto;
+    flex-shrink: 0;
+    min-height: min-content;
+
+}
+
+.readme code {
+    background: #2f2f2f;
+    padding: 1px;
+}
+
+#project-detail-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    min-height: 0;
+}
+
+@keyframes exit-up {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+@keyframes exit-down {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}
+
+@keyframes enter-from-bottom {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes enter-from-top {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.exit-up {
+    animation: exit-up 200ms ease forwards;
+}
+
+.exit-down {
+    animation: exit-down 200ms ease forwards;
+}
+
+.enter-from-bottom {
+    animation: enter-from-bottom 220ms ease forwards;
+}
+
+.enter-from-top {
+    animation: enter-from-top 220ms ease forwards;
 }
 
 /* predefine some */
