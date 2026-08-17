@@ -32,7 +32,7 @@ const Projects = [
         "git": "https://git.vaito.dev/vaito/vaito",
         "docs": undefined,
         "package": undefined,
-        "rawReadme": "https://git.vaito.dev/vaito/dur_convert/raw/branch/main/README.md"
+        "rawReadme": "https://git.vaito.dev/vaito/vaito/raw/branch/main/README.md"
     },
 ]
 
@@ -69,6 +69,9 @@ async function selectProject(ind) {
             </div>
             `
         }, { once: true });
+        const selected = document.getElementsByClassName("selected");
+        if (selected.length)
+            selected[0].classList.remove("selected")
         return;
     }
 
@@ -81,9 +84,6 @@ async function selectProject(ind) {
         container.addEventListener("animationend", () => {
             container.classList.remove("enter-from-top");
         }, { once: true })
-        const selected = document.getElementsByClassName("selected");
-        if (selected.length)
-            selected[0].classList.remove("selected")
         return;
     }
     const goingDown = ind > currentInd;

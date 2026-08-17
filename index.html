@@ -12,98 +12,103 @@
 </head>
 
 <body class="grid-bg anonymous-pro-regular" style="display: block; color: wheat;">
-    <nav style="height: 2vh;">
-        <div class="flex flex-row" style="gap: 20px;">
-            <a href="#home">home</a>
-            <a href="#projects">projects</a>
-            <a href="#links">links & contact</a>
-        </div>
-        <div class="flex flex-row" style="margin-left: auto;">
-            <p>made by Vaito &gt;:D</p>
-        </div>
-    </nav>
+    <div id="home" class="outer-nav">
+        <nav style="height: 2vh;">
+            <div class="flex flex-row" style="gap: 20px;">
+                <a href="#home">home</a>
+                <a href="#projects">projects</a>
+                <a href="#links">links & contact</a>
+            </div>
+            <div class="flex flex-row" style="margin-left: auto;">
+                <p>made by Vaito &gt;:D</p>
+            </div>
+        </nav>
+    </div>
     <!-- Body -->
     <!-- Hero section -->
-    <section id="home" class="box" style="height: 70vh;">
-        <div class="flex" style="flex: 1;">
-            <div class="flex flex-col" style="margin: auto 0 auto 0; gap: 2vh">
-                <p style="font-size: 3rem;">
-                    Hi, I'm Vaito, <br>a
-                    <span id="role">developer</span>.
-                </p>
-                <p style="font-size: larger;">Welcome to my personal site :D</p>
+    <div id="_home" class="outer-box">
+        <section class="box" style="height: 70vh;">
+            <div class="flex" style="flex: 1;">
+                <div class="flex flex-col" style="margin: auto 0 auto 0; gap: 2vh">
+                    <p style="font-size: 3rem;">
+                        Hi, I'm Vaito, <br>a
+                        <span id="role">developer</span>.
+                    </p>
+                    <p style="font-size: larger;">Welcome to my personal site :D</p>
+                </div>
             </div>
-        </div>
-        <div class="flex" style="flex: 1;">
-            <div class="flex flex-col" style="margin: auto; gap: 1vh">
-                <img alt="The cute artwork from @dric on threads"
-                    style="height: 30rem; width: 30rem; flex: 1; border-radius: 10px;" src="./assets/avatar.jpg">
-                <p style="flex: 1; margin-left: auto;">from <a class="animated-underline"
-                        href="https://www.threads.com/share/BAea_LxsV4">@dric on threads</a></p>
+            <div class="flex" style="flex: 1;">
+                <div class="flex flex-col" style="margin: auto; gap: 1vh">
+                    <img alt="The cute artwork from @dric on threads"
+                        style="height: 30rem; width: 30rem; flex: 1; border-radius: 10px;" src="./assets/avatar.jpg">
+                    <p style="flex: 1; margin-left: auto;">from <a class="animated-underline"
+                            href="https://www.threads.com/share/BAea_LxsV4">@dric on threads</a></p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Projects -->
-    <section id="projects" class="box flex flex-col"
-        style="height: 85vh; width: 90vw; padding: 5vh; margin-bottom: 30px; gap: 50px">
-        <div class="flex flex-row" style="align-items: baseline; gap: 20px;">
-            <a style="font-weight: bold; font-size: xx-large;" href="#projects">My cool projects :D</a>
-            <a style="font-size: large; cursor: pointer;" onclick="selectProject('null')">reset</a>
-        </div>
-
-        <div class="flex flex-row" style="height: 90%;">
-            <aside class="flex flex-col" style="width: 25%;">
-                <section class="project-sidebar">
-                    <p class="pi-title">TOEIC Writing Platform</p>
-                    <p class="pi-desc">A simple app to generate topics, submit and evaluate TOEIC Writing essays</p>
+    <div id="projects" class="outer-box">
+        <section class="box flex flex-col"
+            style="height: 85vh; width: 90vw; padding: 5vh; gap: 50px">
+            <div class="flex flex-row" style="align-items: baseline; gap: 20px;">
+                <a style="font-weight: bold; font-size: xx-large;" href="#projects">My cool projects :D</a>
+                <a style="font-size: large; cursor: pointer;" onclick="selectProject('null')">reset</a>
+            </div>
+            <div class="flex flex-row" style="height: 90%;">
+                <aside class="flex flex-col" style="width: 25%;">
+                    <section class="project-sidebar">
+                        <p class="pi-title">TOEIC Writing Platform</p>
+                        <p class="pi-desc">A simple app to generate topics, submit and evaluate TOEIC Writing essays</p>
+                    </section>
+                    <section class="project-sidebar">
+                        <p class="pi-title">MineJS</p>
+                        <p class="pi-desc">A Minecraft client package</p>
+                    </section>
+                    <section class="project-sidebar">
+                        <p class="pi-title">Dur Converter</p>
+                        <p class="pi-desc">A simple converter CLI that convert your video into .dur file</p>
+                    </section>
+                    <section class="project-sidebar">
+                        <p class="pi-title">Dump SQLModel</p>
+                        <p class="pi-desc">A simple library that helps you dump and load your SQLModel objects</p>
+                    </section>
+                    <section class="project-sidebar">
+                        <p class="pi-title">This site</p>
+                        <p class="pi-desc">My personal site :D</p>
+                    </section>
+                </aside>
+                <!-- Splitter -->
+                <div class="border" style="border-width: 1px; width: 0px; margin-left: 10px; margin-right: 20px;"></div>
+                <section class="flex flex-col" style="width: 75%; height: inherit; gap: 20px" id="project-detail">
                 </section>
-                <section class="project-sidebar">
-                    <p class="pi-title">MineJS</p>
-                    <p class="pi-desc">A Minecraft client package</p>
-                </section>
-                <section class="project-sidebar">
-                    <p class="pi-title">Dur Converter</p>
-                    <p class="pi-desc">A simple converter CLI that convert your video into .dur file</p>
-                </section>
-                <section class="project-sidebar">
-                    <p class="pi-title">Dump SQLModel</p>
-                    <p class="pi-desc">A simple library that helps you dump and load your SQLModel objects</p>
-                </section>
-                <section class="project-sidebar">
-                    <p class="pi-title">This site</p>
-                    <p class="pi-desc">My personal site :D</p>
-                </section>
-            </aside>
-
-            <!-- Splitter -->
-            <div class="border" style="border-width: 1px; width: 0px; margin-left: 10px; margin-right: 20px;"></div>
-
-            <section class="flex flex-col" style="width: 75%; height: inherit; gap: 20px" id="project-detail">
-            </section>
-        </div>
-    </section>
+            </div>
+        </section>
+    </div>
 
     <!-- Links -->
-    <section class="flex flex-row box" id="links" style="gap: 60px">
-        <div class="flex flex-col" style="flex: 1; border-width: 5px; border-style: solid; padding-top: 50px; padding-bottom: 50px;">
-            <div class="flex flex-col" style="margin: auto; align-items: center;">
-                <h1>Vaito</h1>
-                <p style="font-size: large;">Now learning @ <a href="https://hcmus.edu.vn/">HCMUS</a></p>
+    <div id="links" class="outer-box" style="padding-bottom: 3vh;">
+        <section class="flex flex-row box" style="gap: 60px">
+            <div class="flex flex-col" style="flex: 1; border-width: 5px; border-style: solid; padding-top: 50px; padding-bottom: 50px;">
+                <div class="flex flex-col" style="margin: auto; align-items: center;">
+                    <h1>Vaito</h1>
+                    <p style="font-size: large;">Now learning @ <a href="https://hcmus.edu.vn/">HCMUS</a></p>
+                </div>
             </div>
-        </div>
-        <div class="flex flex-col" style="flex: 1; gap: 10px">
-            <p style="font-weight: bold; font-size: xx-large;">Links</p>
-            <a style="font-size: larger;" href="https://git.vaito.dev/vaito">Forgejo</a>
-            <a style="font-size: larger;" href="https://github.com/VaitoSoi/">GitHub</a>
-        </div>
-        <div class="flex flex-col" style="flex: 1; gap: 10px">
-            <p style="font-weight: bold; font-size: xx-large;">Contacts</p>
-            <a style="font-size: larger;" href="mailto:me@vaito.dev">me@vaito.dev</a>
-            <a style="font-size: larger;" href="mailto:duyduy15456@gmail.com">duyduy15456@gmail.com</a>
-            <a style="font-size: larger;" href="https://discord.com/users/692271452053045279">Discord</a>
-        </div>
-    </section>
+            <div class="flex flex-col" style="flex: 1; gap: 10px">
+                <p style="font-weight: bold; font-size: xx-large;">Links</p>
+                <a style="font-size: larger;" href="https://git.vaito.dev/vaito">Forgejo</a>
+                <a style="font-size: larger;" href="https://github.com/VaitoSoi/">GitHub</a>
+            </div>
+            <div class="flex flex-col" style="flex: 1; gap: 10px">
+                <p style="font-weight: bold; font-size: xx-large;">Contacts</p>
+                <a style="font-size: larger;" href="mailto:me@vaito.dev">me@vaito.dev</a>
+                <a style="font-size: larger;" href="mailto:duyduy15456@gmail.com">duyduy15456@gmail.com</a>
+                <a style="font-size: larger;" href="https://discord.com/users/692271452053045279">Discord</a>
+            </div>
+        </section>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
