@@ -1,0 +1,60 @@
+<div class="w-full flex-15 flex flex-row box">
+    <div class="flex-1 flex">
+        <p class="my-auto ml-15 text-4xl">
+            <span class="text-5xl">Hi 👋</span><br />
+            I'm <span class="changing-who"></span>
+        </p>
+    </div>
+    <div class="flex flex-1">
+        <div class="flex flex-col m-auto gap-3">
+            <img src="/avatar.jpg" class="rounded-2xl size-[45vh]" />
+            <p class="ml-auto mr-2 text-lg">
+                from <a class="animation" href="https://www.threads.com/@dric/post/DTsFuttD6Rm"
+                    >@dric from threads</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+    const whos = [
+        "Vaito",
+        "a developer",
+        "a gamer",
+        "a music listener",
+        "a student",
+        "a human",
+    ];
+    const getNextWho = (currentWho: string) => {
+        let nextWho = whos[Math.floor(Math.random() * whos.length)];
+        while (nextWho === currentWho)
+            nextWho = whos[Math.floor(Math.random() * whos.length)];
+        return nextWho;
+    };
+
+    const element = document.querySelector(".changing-who");
+
+    if (element) {
+        async function changingWho() {
+            let who = whos[0];
+            element!.textContent = who;
+            while (true) {
+                await sleep(5000);
+                const currentWho = getNextWho(who);
+                while (who.length > 0) {
+                    who = who.slice(0, who.length - 1);
+                    element!.textContent = who;
+                    await sleep(50);
+                }
+                while (who.length != currentWho.length) {
+                    who = currentWho.slice(0, who.length + 1);
+                    element!.textContent = who;
+                    await sleep(50);
+                }
+            }
+        }
+        changingWho();
+    }
+</script>

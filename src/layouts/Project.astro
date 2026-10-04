@@ -1,0 +1,58 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<div class="flex flex-col box size-full py-10 px-15">
+    <h1 class="flex-1 text-5xl text-amber-200">
+        # <span class="font-bold text-amber-200">my projects</span>
+    </h1>
+    <div class="flex-10 px-10 grid grid-cols-2 grid-rows-2 gap-10">
+        <ProjectCard
+            name="minejs"
+            icon="minecraft.png"
+            tags={["minecraft", "nodejs"]}
+            desc={"A simple Minecraft client written entirely in Typesceipt." +
+                "It now support basic function of a client like logging in, basic physic, chating, etc...\n" +
+                "It supports Minecraft version 26.2 and 26.3"}
+            links={{
+                repo: "https://github.com/VaitoSoi/minejs",
+                docs: "https://minejs.vaito.dev",
+                npm: "https://npmjs.org/@vaitosoi/minejs",
+            }}
+        />
+        <ProjectCard
+            name="toeic writing platform"
+            icon="toeic.svg"
+            tags={["toeic", "ai", "fastapi", "react"]}
+            desc={"An TOEIC Writing pratice app. " +
+                "It use AI for generating topics and scoring the submissions\n" +
+                "It support all 3 parts of TOEIC Writing tests."}
+            links={{
+                repo: "https://git.vaito.dev/vaito/ai-toeic",
+            }}
+        />
+        <ProjectCard
+            name="dump-sqlmodel"
+            icon="sqlmodel.png"
+            tags={["python", "sqlmodel"]}
+            desc={"A simple library for dumping and loading SQLModel object.\n" +
+                "Its main feature is dumping the model for other purpose (like caching), while preserve the cyclic references."}
+            links={{
+                repo: "https://git.vaito.dev/vaito/dump-sqlmodel",
+                pypi: "https://pypi.org/project/dump-sqlmodel/",
+            }}
+        />
+        <ProjectCard
+            name="dur converter"
+            tags={["python", "durdraw"]}
+            desc={"A simple Python script to convert your video into .dur file.\n" +
+                "It also supports Floyd-Steinberg dithering for better result.\n" +
+                "Click related button to see durdraw project"}
+            links={{
+                repo: "https://git.vaito.dev/vaito/dur_convert/",
+                pypi: "https://pypi.org/project/dur-converter/",
+                related: "https://github.com/durdraw/durdraw/",
+            }}
+        />
+    </div>
+</div>

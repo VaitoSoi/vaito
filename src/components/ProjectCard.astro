@@ -1,0 +1,76 @@
+---
+import ProjectLink from "./ProjectLink.astro";
+interface Props {
+    name: string;
+    icon?: string;
+    tags: string[];
+    desc: string;
+    links: {
+        repo: string;
+        docs?: string;
+        npm?: string;
+        pypi?: string;
+        // crate?: string;
+        // docker?: string;
+        related?: string;
+    };
+}
+const {
+    name,
+    icon,
+    tags,
+    desc,
+    links: {
+        repo,
+        docs,
+        npm,
+        pypi,
+        // crate,
+        // docker,
+        related,
+    },
+} = Astro.props;
+const descTexts = desc.split("\n");
+---
+
+<div
+    class="flex flex-col border-2 rounded-md border-dashed hover:border-solid hover:-translate-y-1 transition-all ease duration-150 px-10 py-5"
+>
+    <div class="flex-4 flex flex-col gap-5">
+        <div class="flex flex-1 flex-row gap-5 items-center">
+            {icon && <img class="h-[3vh]" src={`/projects/${icon}`} />}
+            <h2 class="text-4xl font-bold text-amber-200">{name}</h2>
+            <p class="text-2xl whitespace-pre-line">
+                {tags.map((val) => `#${val}`).join(" ")}
+            </p>
+        </div>
+        <p class="flex-5 text-2xl">
+            {
+                descTexts.map((val) => (
+                    <span>
+                        {val}
+                        <br />
+                    </span>
+                ))
+            }
+        </p>
+    </div>
+    <div class="border border-dashed border-amber-100/50"></div>
+    <div class="flex-1 flex flex-row gap-5 items-center">
+        <ProjectLink url={repo} icon="git.svg" name="repo" />
+        {docs && <ProjectLink url={docs} icon="wiki.svg" name="docs" />}
+        {npm && <ProjectLink url={npm} icon="npm.svg" name="npm" />}
+        {pypi && <ProjectLink url={pypi} icon="pypi.png" name="pypi" />}
+        <!-- {crate && <ProjectLink url={crate} icon="crate.svg" name="crate" />} -->
+        <!-- {docker && <ProjectLink url={docker} icon="docker.svg" name="docker" />} -->
+        {
+            related && (
+                <ProjectLink
+                    url={related}
+                    icon="related.svg"
+                    name="related project"
+                />
+            )
+        }
+    </div>
+</div>

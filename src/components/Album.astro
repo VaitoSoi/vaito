@@ -1,0 +1,25 @@
+---
+interface Props {
+    name: string;
+    authors: string;
+    image: string;
+    url: string;
+    className?: string;
+}
+const { className, name, authors, image, url } = Astro.props;
+---
+
+<a
+    class={`flex flex-row gap-3 border-2 border-stone-800 rounded-lg py-2 px-3 items-center bg-black ` +
+        "hover:border-amber-100 hover:-translate-y-1 transition-all ease duration-200 " +
+        (className || "")}
+    href={url}
+>
+    <div class="h-full group">
+        <img class="h-full rounded-lg" src={image} />
+    </div>
+    <div>
+        <p class="font-[Google_Sans_Flex] font-semibold text-xl">{name}</p>
+        <p class="font-[Google_Sans_Flex] text-lg">{authors}</p>
+    </div>
+</a>

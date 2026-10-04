@@ -1,0 +1,16 @@
+---
+interface Props {
+    url: string,
+    icon: string,
+    name: string
+}
+const { url, icon, name } = Astro.props;
+---
+<a
+    href={url}
+    class="flex flex-row gap-2 items-center text-lg h-[4vh] bg-zinc-900 p-2 rounded-md"
+    target="_blank"
+>
+    <img class="h-full rounded-md" src={`/badge/${icon}`} />
+    <p class="text-xl">{name}</p>
+</a>
