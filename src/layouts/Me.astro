@@ -2,19 +2,19 @@
 import Album from "../components/Album.astro";
 ---
 
-<div class="flex flex-col box size-full py-10 px-15">
-    <h1 class="flex-1 text-5xl text-amber-200">
+<div class="flex flex-col box size-full xl:py-10 py-5 xl:px-15 px-5">
+    <h1 class="flex-1 text-3xl xl:text-5xl text-amber-200">
         # <span class="font-bold text-amber-200">about me</span>
     </h1>
-    <div class="flex-10 flex flex-col gap-7 pl-10 text-2xl">
-        <div class="flex-1 flex flex-row gap-7">
-            <div class="flex flex-1 flex-col gap-3 py-10">
+    <div class="flex-10 flex flex-col gap-7 xl:pl-10 xl:text-2xl text-lg">
+        <div class="flex-1 flex flex-col xl:flex-row xl:gap-7 gap-3">
+            <div class="flex flex-1 flex-col gap-3 xl:py-10">
                 <p>
                     Hi, my name is Duy, but you can also call me <span
                         class="font-bold">Vaito</span
                     > :D
                 </p>
-                <p>
+                <p class="hidden xl:inline-block">
                     <span class="text-5xl font-bold">5</span> years ago, I wrote my
                     very first line of code and haven't stopped till this day :o
                 </p>
@@ -22,68 +22,68 @@ import Album from "../components/Album.astro";
             <div class="flex flex-1 flex-col gap-5 items-center">
                 <p>Languages that I "speak"</p>
                 <div class="flex flex-row gap-2">
-                    <img class="h-[7vh]" src="/language/ts.svg" />
-                    <img class="h-[7vh]" src="/language/js.svg" />
-                    <img class="h-[7vh]" src="/language/py.svg" />
-                    <img class="h-[7vh]" src="/language/rs.png" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/ts.svg" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/js.svg" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/py.svg" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/rs.png" />
                 </div>
                 <div class="flex flex-row gap-2">
-                    <img class="h-[7vh]" src="/language/fp.png" />
-                    <img class="h-[7vh]" src="/language/c.png" />
-                    <img class="h-[7vh]" src="/language/cpp.svg" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/fp.png" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/c.png" />
+                    <img class="h-[5vh] xl:h-[7vh]" src="/language/cpp.svg" />
                 </div>
             </div>
         </div>
-        <div class="flex-2 flex flex-row gap-7">
+        <div class="flex-2 flex flex-col xl:flex-row gap-7">
             <div class="flex flex-3 flex-col items-center">
                 <p class="flex-1">
-                    I'm also a <a href="https://hackclub.com" class="animation"
+                    I'm also a <a href="https://hackclub.com" class="animation underline xl:no-underline"
                         ><span class="font-[Phantom_Sans] font-bold"
                             >HackClub-er</span
                         >
                         {" "}<img
                             src="/hackclub/hc.png"
-                            class="h-[4vh] inline"
+                            class="h-[4vh] hidden xl:inline"
                         /></a
                     >
                 </p>
                 <div class="flex-5 relative size-full">
                     <a
-                        class={"absolute z-3 h-[20vh] bg-indigo-950 p-5 rounded-2xl left-[-8%] top-[12%] -rotate-10 " +
-                            "hover:opacity-100 hover:-translate-y-2 hover:-translate-x-1 transition-all ease duration-200"}
+                        class={"absolute z-3 h-[15vh] xl:h-[20vh] bg-indigo-950 p-5 rounded-2xl xl:left-[-8%] xl:top-[12%] left-[5%] xl:-rotate-10 -rotate-5 " +
+                            "xl:hover:opacity-100 xl:hover:-translate-y-2 xl:hover:-translate-x-1 transition-all ease duration-200"}
                         href="https://stardance.hackclub.com"
                     >
                         <img src="/hackclub/sd.png" class="size-full" />
                     </a>
                     <a
                         href="https://flavortown.hackclub.com"
-                        class={"absolute z-2 h-[20vh] bg-yellow-100 p-5 rounded-2xl opacity-75 left-[42%] " +
-                            "hover:opacity-100 hover:-translate-y-2 transition-all ease duration-200"}
+                        class={"absolute z-2 h-[15vh] xl:h-[20vh] bg-yellow-100 p-5 rounded-2xl opacity-75 xl:left-[42%] xl:top-0 top-[28%] left-[5%] xl:rotate-0 -rotate-15 " +
+                            "xl:hover:opacity-100 xl:hover:-translate-y-2 transition-all ease duration-200"}
                     >
                         <img src="/hackclub/ft.avif" class="size-full" />
                     </a>
                     <a
                         href="https://summer.hackclub.com"
-                        class={"absolute z-1 h-[20vh] bg-yellow-100 p-5 rounded-2xl opacity-50 top-[12%] left-[55%] rotate-10 " +
-                            "hover:opacity-100 hover:-translate-y-2 hover:translate-x-1 transition-all ease duration-200"}
+                        class={"absolute z-1 h-[15vh] xl:h-[20vh] bg-yellow-100 p-5 rounded-2xl opacity-50 xl:top-[12%] top-[30%] xl:left-[55%] left-[40%] rotate-10 " +
+                            "xl:hover:opacity-100 xl:hover:-translate-y-2 xl:hover:translate-x-1 transition-all ease duration-200"}
                     >
                         <img src="/hackclub/som.png" class="size-full" />
                     </a>
-                    <p class="absolute z-10 left-[25%] top-[65%]">
+                    <p class="absolute z-10 left-[5%] xl:left-[25%] top-[70%] text-center">
                         <a
                             href="https://hackclub.com/programs"
-                            class="animation font-bold">YSWS</a
+                            class="animation underline xl:no-underline font-bold">YSWS</a
                         > that I have participated
                     </p>
                 </div>
             </div>
-            <div class="flex-2 flex flex-col gap-3">
+            <div class="flex-2 hidden xl:flex flex-col gap-3">
                 <h2 class="text-3xl font-bold">other things about me</h2>
                 <p>I also play game (a lot actually)</p>
                 <div class="mx-auto flex flex-row gap-5 items-center">
                     <img class="size-[5vh]" src="/game/zzz.png" />
                     <img class="h-[5vh]" src="/game/mc.png" />
-                    <img class="h-[5vh]" src="/game/sf.png" />
+                    <!-- <img class="h-[5vh]" src="/game/sf.png" /> -->
                 </div>
                 <p class="mt-5">And listen to music too</p>
                 <div class="flex flex-col gap-3">

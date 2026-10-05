@@ -2,11 +2,11 @@
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<div class="flex flex-col box size-full py-10 px-15">
+<div class="flex flex-col box size-full xl:py-10 py-5 xl:px-15 px-5 gap-5">
     <h1 class="flex-1 text-5xl text-amber-200">
-        # <span class="font-bold text-amber-200">my projects</span>
+        # <span class="font-bold text-amber-200"><span class="text-current hidden xl:inline">my</span> projects</span>
     </h1>
-    <div class="flex-10 px-10 grid grid-cols-2 grid-rows-2 gap-10">
+    <div class="flex-10 xl:px-10 xl:grid xl:grid-cols-2 xl:grid-rows-2 flex flex-col xl:gap-10 gap-5">
         <ProjectCard
             name="minejs"
             icon="minecraft.png"
@@ -19,6 +19,10 @@ import ProjectCard from "../components/ProjectCard.astro";
                 docs: "https://minejs.vaito.dev",
                 npm: "https://npmjs.org/@vaitosoi/minejs",
             }}
+            short={{
+                name: "minejs",
+                desc: "A simple Minecraft client written entirely in Typesceipt"
+            }}
         />
         <ProjectCard
             name="toeic writing platform"
@@ -29,6 +33,10 @@ import ProjectCard from "../components/ProjectCard.astro";
                 "It support all 3 parts of TOEIC Writing tests."}
             links={{
                 repo: "https://git.vaito.dev/vaito/ai-toeic",
+            }}
+            short={{
+                name: "ai-toeic",
+                desc: "An TOEIC Writing pratice."
             }}
         />
         <ProjectCard
@@ -41,18 +49,24 @@ import ProjectCard from "../components/ProjectCard.astro";
                 repo: "https://git.vaito.dev/vaito/dump-sqlmodel",
                 pypi: "https://pypi.org/project/dump-sqlmodel/",
             }}
-        />
-        <ProjectCard
-            name="dur converter"
-            tags={["python", "durdraw"]}
-            desc={"A simple Python script to convert your video into .dur file.\n" +
-                "It also supports Floyd-Steinberg dithering for better result.\n" +
-                "Click related button to see durdraw project"}
-            links={{
-                repo: "https://git.vaito.dev/vaito/dur_convert/",
-                pypi: "https://pypi.org/project/dur-converter/",
-                related: "https://github.com/durdraw/durdraw/",
+            short={{
+                name: "dump-sqlmodel",
+                desc: "A simple library for dumping and loading SQLModel object"
             }}
         />
+        <div class="hidden xl:block">
+            <ProjectCard
+                name="dur converter"
+                tags={["python", "durdraw"]}
+                desc={"A simple Python script to convert your video into .dur file.\n" +
+                    "It also supports Floyd-Steinberg dithering for better result.\n" +
+                    "Click related button to see durdraw project"}
+                links={{
+                    repo: "https://git.vaito.dev/vaito/dur_convert/",
+                    pypi: "https://pypi.org/project/dur-converter/",
+                    related: "https://github.com/durdraw/durdraw/",
+                }}
+            />
+        </div>
     </div>
 </div>

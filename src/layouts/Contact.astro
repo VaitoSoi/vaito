@@ -1,21 +1,24 @@
-<div class="flex flex-col box size-full py-10 px-15">
-    <h1 class="flex-1 text-5xl text-amber-200">
-        # <span class="font-bold text-amber-200">contacts & links</span>
+<div class="flex flex-col box size-full xl:py-10 py-5 xl:px-15 px-10 gap-2">
+    <h1 class="flex-1 xl:text-5xl text-3xl text-amber-200">
+        # <span class="font-bold text-current"
+            >contacts <span class="text-current hidden xl:inline">& links</span
+            ></span
+        >
     </h1>
-    <div class="flex-5 flex flex-col gap-5 text-2xl">
-        <h2 class="text-4xl">you want to text me ?</h2>
+    <div class="xl:flex-5 flex-10 flex flex-col gap-5 xl:text-2xl text-lg">
+        <h2 class="xl:text-4xl text-2xl">you want to text me ?</h2>
         <p>if so, here are some options for you:</p>
-        <div class="flex flex-row gap-10 px-2 text-lg">
+        <div class="flex flex-col xl:flex-row gap-10 px-2 xl:text-lg text-base">
             <div
                 class="flex-1 h-[23vh] flex flex-col gap-3 p-4 rounded-2xl border border-dashed"
             >
                 <div class="flex flex-row gap-2 items-center">
-                    <span class="text-5xl font-bold">@</span>
-                    <h3 class="text-3xl items-center font-semibold">
+                    <span class="xl:text-5xl text-3xl font-bold">@</span>
+                    <h3 class="xl:text-3xl text-xl items-center font-semibold">
                         primary mail
                     </h3>
                 </div>
-                <p>
+                <p class="hidden xl:inline">
                     i'll be active on this channel. if you are finding for a
                     general inquiries or professional correspondence, find me
                     here.
@@ -40,10 +43,12 @@
                 class="flex-1 h-[23vh] flex flex-col gap-3 p-4 rounded-2xl border border-dashed"
             >
                 <div class="flex flex-row gap-2 items-center">
-                    <span class="text-5xl font-bold">@</span>
-                    <h3 class="text-3xl items-center font-semibold">gmail</h3>
+                    <span class="xl:text-5xl text-3xl font-bold">@</span>
+                    <h3 class="xl:text-3xl text-xl items-center font-semibold">
+                        gmail
+                    </h3>
                 </div>
-                <p>
+                <p class="hidden xl:inline">
                     this will act as the fallback email when my main mail is not
                     available, also for google drive sharing.
                 </p>
@@ -59,7 +64,7 @@
                     <p
                         class="text-2xl opacity-80 group-hover:opacity-100 group-hover:font-semibold group-hover:text-black"
                     >
-                        duyduy15456@gmail.com
+                        duyduy15456<span class="text-current hidden xl:inline">@gmail.com</span>
                     </p>
                 </a>
             </div>
@@ -67,10 +72,14 @@
                 class="flex-1 h-[23vh] flex flex-col gap-3 p-4 rounded-2xl border border-dashed"
             >
                 <div class="flex flex-row gap-2 items-center">
-                    <span class="text-5xl font-bold">@</span>
-                    <h3 class="text-3xl items-center font-semibold">discord</h3>
+                    <span class="xl:text-5xl text-3xl font-bold">@</span>
+                    <h3 class="xl:text-3xl text-xl items-center font-semibold">
+                        discord
+                    </h3>
                 </div>
-                <p>don't want email, this is the alternative method.</p>
+                <p class="hidden xl:inline">
+                    don't want email, this is the alternative method.
+                </p>
                 <a
                     href="https://discord.com/users/692271452053045279"
                     class={"flex flex-row gap-2 items-center mt-auto border-2 rounded-xl py-2 px-5 group " +
@@ -89,7 +98,7 @@
             </div>
         </div>
     </div>
-    <div class="flex-5 flex flex-col gap-5">
+    <div class="flex-5 hidden xl:flex flex-col gap-5">
         <h2 class="text-4xl">other links:</h2>
         <div class="flex flex-row gap-10 px-2 text-lg">
             <div
@@ -173,7 +182,7 @@
     </div>
     <div class="flex flex-col">
         <a
-            class="mx-auto animation"
+            class="mx-auto animation underline xl:no-underline"
             href="https://github.com/VaitoSoi/vaito/blob/main/LICENSE"
             >Copyright (c) 2026 Tran Minh Duy</a
         >

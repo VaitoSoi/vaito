@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../layouts/Hero.astro";
 import Education from "../layouts/Education.astro";
@@ -9,21 +8,65 @@ import Project from "../layouts/Project.astro";
 import Contact from "../layouts/Contact.astro";
 ---
 
-<Layout>
-    <div class="w-screen h-screen px-15 py-10 flex flex-col gap-5" id="home">
-        <Header />
-        <Hero />
-    </div>
-    <div class="w-screen h-screen px-15 py-7 flex flex-col gap-5" id="me">
-        <Me />
-    </div>
-    <div class="w-screen h-screen px-15 py-7 flex flex-col gap-5" id="education">
-        <Education />
-    </div>
-    <div class="w-screen h-screen px-15 py-7 flex flex-col gap-5" id="project">
-        <Project />
-    </div>
-    <div class="w-screen h-screen px-15 py-7 flex flex-col gap-5" id="contacts_and_links">
-        <Contact />
-    </div>
-</Layout>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Vaito</title>
+        <link rel="icon" href="/favico.png" type="image/x-icon" />
+    </head>
+
+    <body class="background xl:px-15 px-5">
+        <div
+            class="w-full h-screen py-5 xl:py-10 flex flex-col gap-5"
+            id="home"
+        >
+            <Header />
+            <Hero />
+        </div>
+        <div
+            class="w-full h-screen xl:h-screen xl:py-7 py-5 flex flex-col gap-5"
+            id="me"
+        >
+            <Me />
+        </div>
+        <div
+            class="w-full h-screen xl:py-7 py-5 flex flex-col gap-5"
+            id="education"
+        >
+            <Education />
+        </div>
+        <div class="w-full h-screen xl:py-7 py-5 flex flex-col gap-5" id="projects">
+            <Project />
+        </div>
+        <div class="w-full h-screen xl:py-7 py-5 flex flex-col gap-5" id="contacts_and_links">
+            <Contact />
+        </div>
+    </body>
+</html>
+
+<style>
+    .background {
+        --s: 50px;
+
+        background-color: #111;
+
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(81, 81, 81, 0.15) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(81, 81, 81, 0.15) 1px,
+                transparent 1px
+            );
+
+        background-size: var(--s) var(--s);
+        background-position: 0 0;
+
+        background-repeat: repeat;
+    }
+</style>

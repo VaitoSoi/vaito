@@ -8,6 +8,10 @@
         font-family: "Anonymous Pro";
     }
 
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
     a.animation {
         cursor: pointer;
         position: relative;
